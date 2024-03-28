@@ -28,15 +28,15 @@ public class DataGenerator {
     }
 
     public static String generateCity() {
-        var cities = new String [] {"Москва", "Новосибирск", "Тула"};
-        return cities [new Random().nextInt(cities.length)];
+        var cities = new String[]{"Москва", "Новосибирск", "Тула"};
+        return cities[new Random().nextInt(cities.length)];
 
     }
 
     public static String generateName(String locale) {
         // TODO: добавить логику для объявления переменной name и задания её значения, для генерации можно
         // использовать Faker
-        Faker faker = new Faker (new Locale("RU"));
+        Faker faker = new Faker(new Locale("RU"));
         String name = faker.name().fullName();
         return name;
     }
@@ -44,7 +44,7 @@ public class DataGenerator {
     public static String generatePhone(String locale) {
         // TODO: добавить логику для объявления переменной phone и задания её значения, для генерации можно
         // использовать Faker
-        Faker faker = new Faker (new Locale("RU"));
+        Faker faker = new Faker(new Locale("RU"));
         String phone = faker.phoneNumber().phoneNumber();
         return phone;
     }
