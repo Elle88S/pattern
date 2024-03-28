@@ -31,7 +31,7 @@ class DeliveryTest {
         var secondMeetingDate = DataGenerator.generateDate(daysToAddForSecondMeeting);
 
         SelenideElement form = $("[id=root]");
-        form.$("[data-test-id=city] input").setValue(DataGenerator.generateCity("ru"));
+        form.$("[data-test-id=city] input").setValue(DataGenerator.generateCity());
         form.$("[data-test-id=date] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         form.$("[data-test-id=date] input").setValue(firstMeetingDate);
         form.$("[data-test-id=name] input").setValue(DataGenerator.generateName("ru"));
